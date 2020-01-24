@@ -1,41 +1,127 @@
 <div class="container">
-  <div class="row">
+  <div class="row size-container">
     <!--
       -- ─── NAVIGATION ──────────────────────────────────────────────────
       -->
-      <div class="col-md-2 containerBorder">
+    <div class="col-md-2 containerBorder">
 
-        <div class="nav  nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">About</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Resume</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Works</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
-        </div>
+      <div class="nav nav-pills nav-size" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Skills </a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Resume</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Projects</a>
+        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
       </div>
-      <!-- ───────────────────────────────────────────────────────────────── -->
-      <!--
-        -- ─── MY INFOS ────────────────────────────────────────────────────
-        -->
-      <div class="col-md-4 containerBorder text-center">
-        <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size" alt="Responsive image">
-          <h3 >Fabio Santos</h3>
-          <p >Developpeur Web</p>
-          <button type="button" class="btn btn-primary btn-lg">Download CV</button>
-          <button type="button" class="btn btn-secondary btn-lg">Contact Me</button>
+    </div>
+    <!-- ───────────────────────────────────────────────────────────────── -->
+    <!--
+      -- ─── MY INFOS ────────────────────────────────────────────────────
+      -->
+    <div class="col-md-4 containerBorder text-center" *ngIf="isloading">
+      <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size" alt="Responsive image">
+      <h3>{{profileDataList.basics.name}}</h3>
+      <p>{{profileDataList.basics.label}}</p>
 
-      </div>
-      <!--
-        -- ─── TRANSITION INFOS ────────────────────────────────────────────
-        -->
-      <div class="col-md-6 containerBorder">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">dgdfgdfgfd</div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">.45245254</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">.lilio..</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...727uilui</div>
+      <button type="button" class="btn btn-primary btn-lg">Download CV</button>
+      <button type="button" class="btn btn-secondary btn-lg">Contact Me</button>
+
+    </div>
+    <!--
+      -- ─── TRANSITION INFOS ────────────────────────────────────────────
+      -->
+    <div class="col-md-6 containerBorder" *ngIf="isloading">
+      <!--- SKILLS ------------------------>
+      <!---------------------------------------------------------------------------------------->
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <div>
+            <h3>Skills</h3>
+
+            <ul *ngFor="let item of profileDataList.skills; let i = index" class="test">
+              <li>
+                {{item.name}}
+              </li>
+              <li>
+                {{item.level}}
+              </li>
+              <li>
+                {{item.rating}}
+              </li>
+            </ul>
+          </div>
         </div>
-            </div>
-      <!-- ───────────────────────────────────────────────────────────────── -->
+        <!---------------------------------------------------------------------------------------->
+        <!-- RESUME  ------------------------->
+        <!---------------------------------------------------------------------------------------->
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <h3>Work</h3>
+          <ul *ngFor="let item of profileDataList.work; let i = index" class="test">
+            <li>
+              {{item.company}}
+            </li>
+            <li>
+              {{item.position}}
+            </li>
+            <li>
+              {{item.website}}
+            </li>
+            <li>
+              {{item.startDate}}
+            </li>
+            <li>
+              {{item.endDate}}
+            </li>
+          </ul>
+          <h3>Education</h3>
+          <ul *ngFor="let item of profileDataList.education; let i = index" class="test">
+            <li>
+              {{item.institution}}
+            </li>
+            <li>
+              {{item.area}}
+            </li>
+            <li>
+              {{item.description}}
+            </li>
+            <li>
+              {{item.activities}}
+            </li>
+            <li>
+              {{item.startDate}}
+            </li>
+            <li>
+              {{item.endDate}}
+            </li>
+          </ul>
+        </div>
+        <!---------------------------------------------------------------------------------------->
+        <!-- WORKS  ------------------------->
+        <!---------------------------------------------------------------------------------------->
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          <h3>Projects</h3>
+          <ul *ngFor="let item of profileDataList.projects; let i = index" class="test">
+            <li>
+              {{item.displayName}}
+            </li>
+            <li>
+              {{item.summary}}
+            </li>
+            <li>
+              {{item.website}}
+            </li>
+            <li>
+              {{item.githubUrl}}
+            </li>
+            <li>
+              {{item.languages}}
+            </li>
+           
+          </ul>
+        </div>
+        <!---------------------------------------------------------------------------------------->
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...727uilui</div>
+      </div>
+    </div>
+    <!-- ───────────────────────────────────────────────────────────────── -->
 
   </div>
 </div>

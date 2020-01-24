@@ -7,3 +7,11 @@
 .img-size{
   height: 200px;
 }
+
+.size-container{
+    height:800px;
+}
+
+.nav-size a{
+    width:100px;
+}

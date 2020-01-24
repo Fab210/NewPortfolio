@@ -9,16 +9,18 @@ import { ProfileDataService } from "./../services/profile-data.service";
 })
 export class PortfolioPageComponent implements OnInit {
   public profileDataList = [];
+  public isloading = false;
   constructor(private profileDataService: ProfileDataService) {}
 
   ngOnInit() {
       this.getProfile();
   }
 
-  getProfile() {
-    this.profileDataService.getProfileData().subscribe((res:any) => {
+   getProfile() {
+     this.profileDataService.getProfileData().subscribe((res:any) => {
       console.log(res);
-      this.profileDataList = res.basics;
+       this.profileDataList = res;
+       this.isloading = true;
     });
   }
 }
