@@ -3,24 +3,31 @@
     <!--
       -- ─── NAVIGATION ──────────────────────────────────────────────────
       -->
-    <div class="col-md-2 containerSettings">
-
-      <div class="nav nav-pills nav-size" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-          aria-controls="v-pills-home" aria-selected="true" (click)="addAnimationInContainer()">Skills </a>
-        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-          aria-controls="v-pills-profile" aria-selected="false" (click)="addAnimationInContainer()">Resume</a>
-        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-          aria-controls="v-pills-messages" aria-selected="false" (click)="addAnimationInContainer()">Projects</a>
-        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-          aria-controls="v-pills-settings" aria-selected="false" (click)="addAnimationInContainer()">Contact</a>
-      </div>
+    <div class="col-md-2 containerSettings  ">
+      <ul class="nav flex-md-column justify-content-center" id="naviBar">
+        <li class="nav-item">
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+             aria-controls="v-pills-home" aria-selected="true" (click)="addAnimationInContainer()">Skills </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+             aria-controls="v-pills-profile" aria-selected="false" (click)="addAnimationInContainer()">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+             aria-controls="v-pills-messages" aria-selected="false" (click)="addAnimationInContainer()">Projects</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+             aria-controls="v-pills-settings" aria-selected="false" (click)="addAnimationInContainer()">Contact</a>
+        </li>-->
+      </ul>
     </div>
     <!-- ───────────────────────────────────────────────────────────────── -->
     <!--
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
-    <div class="col-md-4 containerSettings text-center" *ngIf="isloading">
+    <div class="col-md-4 containerSettings text-center bg-white" *ngIf="isloading">
       <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size" alt="Responsive image">
       <h3>{{profileDataList.basics.name}}</h3>
       <p>{{profileDataList.basics.label}}</p>
@@ -32,7 +39,7 @@
     <!--
       -- ─── TRANSITION INFOS ────────────────────────────────────────────
       -->
-    <div class="col-md-6 containerSettings" *ngIf="isloading" id="animationContainer" >
+    <div class="col-md-6 containerSettings bg-white" *ngIf="isloading" id="animationContainer" >
       <!--- SKILLS ------------------------>
       <!---------------------------------------------------------------------------------------->
       <div class="tab-content" id="v-pills-tabContent">
