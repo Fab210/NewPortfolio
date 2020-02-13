@@ -40,25 +40,28 @@
     <!--
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
-    <div class="col-md-4 containerSettings text-center bg-white profileContainer shadow-lg " *ngIf="isloading">
+    <div class="col-md-4 containerSettings text-center bg-white profileContainer shadow " *ngIf="isloading">
       <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size" alt="Responsive image">
-      <h3>{{profileDataList.basics.name}}</h3>
+      <h3 class="myName">{{profileDataList.basics.name}}</h3>
       <p>{{profileDataList.basics.label}}</p>
 
-      <button type="button" class="btn btn-primary btn-lg">Download CV</button>
-      <button type="button" class="btn btn-secondary btn-lg">Contact Me</button>
+     
+      
+        <button type="button" class="btn btn-light btn-lg btn-block">Download CV</button>
+        <button type="button" class="btn btn-light btn-lg btn-block">Contact Me</button>
+     
 
     </div>
     <!--
       -- ─── TRANSITION INFOS ────────────────────────────────────────────
       -->
-    <div class="col-md-6 containerSettings bg-white profileInfoContainers" *ngIf="isloading" id="animationContainer" >
+    <div class="col-md-6 containerSettings bg-white profileInfoContainers " *ngIf="isloading" id="animationContainer" >
       <!--- SKILLS ------------------------>
       <!---------------------------------------------------------------------------------------->
       <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" >
           <div>
-            <h3>Skills</h3>
+            <h3 class="profilDataTitle">Skills</h3>
             <ul *ngFor="let item of profileDataList.skills; let i = index" class="dataList">
               <li>
                 {{item.name}}
@@ -69,58 +72,65 @@
               <li>
                 {{item.rating}}
               </li>
+              <li>
+                {{item.yearsOfExperience}}
+              </li>
             </ul>
           </div>
         </div>
         <!---------------------------------------------------------------------------------------->
         <!-- RESUME  ------------------------->
         <!---------------------------------------------------------------------------------------->
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" >
-          <h3>Work</h3>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <h3 class="profilDataTitle">Work</h3>
+       
           <ul *ngFor="let item of profileDataList.work; let i = index" class="dataList">
+            <li class="date">
+              {{item.startDate}} / {{item.endDate}}
+              
+            </li>
+            
             <li class="position">
               {{item.position}}
             </li>
             <li class="company">
               {{item.company}}
             </li>
-            <li>
+            <li class="website">
               {{item.website}}
+              <hr class="borders">
             </li>
-            <li>
-              {{item.startDate}}
-            </li>
-            <li>
-              {{item.endDate}}
-            </li>
+
           </ul>
-          <h3>Education</h3>
+          
+          <h3 class="profilDataTitle">Education</h3>
           <ul *ngFor="let item of profileDataList.education; let i = index" class="dataList">
-            <li>
+            <li class="date">
+              {{item.startDate}} / {{item.endDate}}
+            </li>
+
+            <li class="institution">
               {{item.institution}}
             </li>
-            <li>
+            <li class="area">
               {{item.area}}
             </li>
-            <li>
+            <li class="description">
               {{item.description}}
             </li>
-            <li>
+            <li class="activities">
               {{item.activities}}
+              <hr class="borders">
             </li>
-            <li>
-              {{item.startDate}}
-            </li>
-            <li>
-              {{item.endDate}}
-            </li>
+
+
           </ul>
         </div>
         <!---------------------------------------------------------------------------------------->
         <!-- WORKS  ------------------------->
         <!---------------------------------------------------------------------------------------->
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-          <h3>Projects</h3>
+          <h3 class="profilDataTitle">Projects</h3>
           <ul *ngFor="let item of profileDataList.projects; let i = index" class="dataList">
             <li>
               {{item.displayName}}
