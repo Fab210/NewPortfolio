@@ -4,7 +4,7 @@
       -- ─── NAVIGATION ──────────────────────────────────────────────────
       -->
     <div class="col-md-2 containerSettings  ">
-      <ul class="nav flex-md-column justify-content-center " id="naviBar">
+      <ul class="nav flex-md-column justify-content-center neumorphismsStyle " id="naviBar">
         <li class="nav-item">
           <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
              aria-controls="v-pills-home" aria-selected="true" (click)="addAnimationInContainer()">
@@ -40,41 +40,40 @@
     <!--
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
-    <div class="col-md-4 containerSettings text-center  profileContainer  " *ngIf="isloading">
-      <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size" alt="Responsive image">
+    <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle" *ngIf="isloading">
+      <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="Responsive image">
       <h3 class="myName">{{profileDataList.basics.name}}</h3>
       <p>{{profileDataList.basics.label}}</p>
 
-
-
-      <button type="button" class="btn  btn-lg btn-block profilButton">Download CV</button>
-      <button type="button" class="btn  btn-lg btn-block profilButton">Contact Me</button>
-
+      <button type="button" class="btn  btn-lg btn-block neumorphismsStyle">Download CV</button>
+      <button type="button" class="btn  btn-lg btn-block neumorphismsStyle">Contact Me</button>
 
     </div>
     <!--
       -- ─── TRANSITION INFOS ────────────────────────────────────────────
       -->
-    <div class="col-md-6 containerSettings profileInfoContainers " *ngIf="isloading" id="animationContainer">
+    <div class="col-md-6 containerSettings profileInfoContainers neumorphismsStyle" *ngIf="isloading" id="animationContainer">
       <!--- SKILLS ------------------------>
       <!---------------------------------------------------------------------------------------->
       <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <div>
-            <h3 class="profilDataTitle">Skills</h3>
+            <h3 class="profilDataTitle">
+              <i class="material-icons">
+                code
+              </i>Skills
+            </h3>
             <ul *ngFor="let item of profileDataList.skills; let i = index" class="dataList">
-              <li>
+              <li class="skillsName">
                 {{item.name}}
               </li>
               <li>
                 {{item.level}}
+                <hr class="borders">
               </li>
-              <li>
-                {{item.rating}}
-              </li>
-              <li>
-                {{item.yearsOfExperience}}
-              </li>
+             
+                
+              
             </ul>
           </div>
         </div>

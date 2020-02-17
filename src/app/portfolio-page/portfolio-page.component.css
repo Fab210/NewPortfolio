@@ -11,32 +11,29 @@
   color: #323232;
   font-family: 'Open Sans', sans-serif;
   padding-top: 20px;
-  border-radius: 5px;
+  border-radius: 12px;
   height: 100%;
-
-
 }
 
 .profileContainer {
   /*box-shadow: -5px 3px 19px 2px rgba(0,0,0,0.55);*/
   z-index: 1;
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+
 }
 
 .profileInfoContainers {
   overflow-y: scroll;
   height: 95%;
   margin-top: 18px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+  border-radius:0px;
+
 }
 
-.profilButton {
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+.neumorphismsStyle {
+  background-color: #eceff3;
+  /*box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);*/
+  /*box-shadow: 5px 5px 7px rgba(163,177,198,0.6), -2px -1px 2px rgba(255,255,255, 0.9);*/
+  box-shadow: 6px 0px 6px rgba(163,177,198,0.6), -6px 0px 12px rgba(255,255,255, 0.9);
 }
 
 .myName {
@@ -53,7 +50,7 @@
     height:750px!important;
 }
 .nav {
-  border-radius: 5px;
+  border-radius: 12px;
   width: 85px;
   height: 230px;
   margin-left: auto;
@@ -70,10 +67,7 @@
   }
 
 
-#naviBar {
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
-}
+
 
 .dataList {
   list-style-type: none;
@@ -114,7 +108,7 @@ hr {
   color: #888888;
 }
 
-.position, .institution {
+.position, .institution, .skillsName {
   font-size: 17px;
   color: #323232;
   font-weight: 600;
@@ -184,7 +178,7 @@ div.content {
       margin-left: 0;
     }
 
-    
+
   }
 
 
