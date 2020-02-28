@@ -9,10 +9,12 @@
   /*border-style: solid;*/
   /*background-color: #fff;*/
   color: #323232;
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Poppins';
   padding-top: 20px;
   border-radius: 12px;
   height: 100%;
+
 }
 
 .profileContainer {
@@ -26,22 +28,42 @@
   height: 95%;
   margin-top: 18px;
   border-radius:0px;
+  
 
 }
 
 .neumorphismsStyle {
-  background-color: #eceff3;
+  background-color: #fff;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
   /*box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);*/
   /*box-shadow: 5px 5px 7px rgba(163,177,198,0.6), -2px -1px 2px rgba(255,255,255, 0.9);*/
-  box-shadow: 6px 0px 6px rgba(163,177,198,0.6), -6px 0px 12px rgba(255,255,255, 0.9);
+  /*box-shadow: 6px 0px 6px rgba(163,177,198,0.6), -6px 0px 12px rgba(255,255,255, 0.9);*/
+  /* box-shadow: 2px 2px 6px rgba(163,177,198,0.6), -2px 0px 12px rgba(255,255,255, 0.9);*/
 }
 
 .myName {
   margin-top: 20px;
 }
 
-.profilDataTitle{
-    text-align:center;
+/*.buttonClick:hover {
+  background-color: #eceff3;
+  box-shadow: inset 5px 0px 6px rgba(163,177,198,0.6), inset -6px 0px 12px rgba(255,255,255, 0.9);
+}*/
+
+.buttonClick {
+  text-transform: uppercase;
+}
+
+.buttonClick:active {
+  background-color: #eceff3;
+  box-shadow: inset 6px 0px 6px rgba(163,177,198,0.6), inset -6px 0px 12px rgba(255,255,255, 0.9);
+  text-transform: uppercase;
+}
+
+
+
+.profilDataTitle {
+  text-align: center;
 }
 
 
@@ -66,14 +88,20 @@
     color: #323232;
   }
 
+.profilDataTitle::first-letter {
+  color: #8A2BE2;
+}
+
 
 
 
 .dataList {
   list-style-type: none;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.company, .area {
+.company, .area, .codeLanguages {
   font-size: 14px;
   color: #999;
   font-weight: 400;
@@ -88,7 +116,7 @@
   vertical-align: top;
   font-size: 13px;
   line-height: 18px;
-  color: #ccc;
+  color: #888888;
   font-weight: 400;
   border: 1px solid #eee;
   margin-top:30px;
@@ -104,14 +132,23 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(191, 191, 191, 1), rgba(0, 0, 0, 0));
   }
 
-.description, .activities, .website {
+.description, .activities, .website, .summary {
   color: #888888;
+  padding-top: 8px;
 }
 
-.position, .institution, .skillsName {
+.jobname {
+  color:#78cc6d;
+}
+
+.position, .institution, .skillsName, .projectsDisplayName {
   font-size: 17px;
   color: #323232;
   font-weight: 600;
+}
+
+.website a {
+  color: #888888;
 }
 
 .nav-link {
