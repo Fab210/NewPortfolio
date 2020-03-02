@@ -1,3 +1,7 @@
+
+
+
+
 <div class="container">
   <div class="row size-container">
     <!--
@@ -13,11 +17,12 @@
             </i>Skills
           </a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
              aria-controls="v-pills-profile" aria-selected="false" (click)="addAnimationInContainer()">
             <i class="material-icons">
-              person
+              assignment
             </i>Resume
           </a>
 
@@ -26,7 +31,7 @@
           <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
              aria-controls="v-pills-messages" aria-selected="false" (click)="addAnimationInContainer()">
             <i class="material-icons">
-              person
+              brush
             </i>Projects
           </a>
         </li>
@@ -44,10 +49,10 @@
       <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="Responsive image">
       <h3 class="myName">{{profileDataList.basics.name}}</h3>
       <p class="jobname">{{profileDataList.basics.label}}</p>
-
-      <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Download CV</button>
-      <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Contact Me</button>
-
+      <div class="buttonsMyInfos">
+        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Download CV</button>
+        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Contact Me</button>
+      </div>
     </div>
     <!--
       -- ─── TRANSITION INFOS ────────────────────────────────────────────
@@ -63,18 +68,20 @@
                 code
               </i>Skills
             </h3>
-            <ul *ngFor="let item of profileDataList.skills; let i = index" class="dataList">
-              <li class="skillsName">
-                {{item.name}}
-              </li>
-              <li>
-                {{item.level}}
-                <hr class="borders">
-              </li>
-             
-                
-              
-            </ul>
+            <div class="skillColumns">
+              <ul *ngFor="let item of profileDataList.skills; let i = index" class="dataListSkills">
+                <li class="skillsName">
+                  {{item.name}}
+                </li>
+                <li>
+                  {{item.level}}
+
+                </li>
+
+
+
+              </ul>
+            </div>
           </div>
         </div>
         <!---------------------------------------------------------------------------------------->
@@ -120,7 +127,7 @@
             <li class="institution">
               {{item.institution}}
             </li>
-            <li class="area">
+            <li class="areaEduc">
               {{item.area}}
             </li>
             <li class="description">
@@ -138,7 +145,9 @@
         <!-- WORKS  ------------------------->
         <!---------------------------------------------------------------------------------------->
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-          <h3 class="profilDataTitle">Projects</h3>
+          <h3 class="profilDataTitle"><i class="material-icons">
+  brush
+</i>Projects</h3>
           <ul *ngFor="let item of profileDataList.projects; let i = index" class="dataList">
             <li class="projectsDisplayName">
               <a href="{{item.githubUrl}}" target="_blank">{{item.displayName}}</a>
@@ -168,4 +177,18 @@
     <!-- ───────────────────────────────────────────────────────────────── -->
 
   </div>
+</div>
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>

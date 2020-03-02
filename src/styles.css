@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 .backgroundGradient {
-   background: linear-gradient(0deg, #50a3a2, #78cc6d);
+  /*background: linear-gradient(0deg, #50a3a2, #78cc6d);
   background-size: 400% 400%;
-
   -webkit-animation: AnimationName 22s ease infinite;
   -moz-animation: AnimationName 22s ease infinite;
   animation: AnimationName 22s ease infinite;
-  /*background-color: #eceff3;*/
+  background-color: #eceff3;*/
+ 
 }
 
 body {
