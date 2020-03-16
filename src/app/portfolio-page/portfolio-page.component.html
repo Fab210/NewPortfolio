@@ -68,6 +68,7 @@
                 code
               </i>Skills
             </h3>
+            <hr class="bordersTitle">
             <div class="skillColumns">
               <ul *ngFor="let item of profileDataList.skills; let i = index" class="dataListSkills">
                 <li class="skillsName">
@@ -93,7 +94,7 @@
               work
             </i>Work
           </h3>
-
+          <hr class="bordersTitle">
           <ul *ngFor="let item of profileDataList.work | workDate; let i = index" class="dataList">
             <li class="date">
               {{item.startDate}} / {{item.endDate}}
@@ -119,6 +120,7 @@
               school
             </i>Education
           </h3>
+          <hr class="bordersTitle">
           <ul *ngFor="let item of profileDataList.education; let i = index" class="dataList">
             <li class="date">
               {{item.startDate}} / {{item.endDate}}
@@ -150,6 +152,7 @@
               brush
             </i>Projects
           </h3>
+          <hr class="bordersTitle">
           <ul *ngFor="let item of profileDataList.projects; let i = index" class="dataList">
             <li class="projectsDisplayName">
               <a href="{{item.githubUrl}}" target="_blank">{{item.displayName}}</a>

@@ -14,17 +14,18 @@
   padding-top: 20px;
   border-radius: 6px;
   height: 100%;
-
 }
 
 .skillColumns {
   column-count: 2;
 }
+
 .dataListSkills {
   height: 85px;
   list-style-type: none;
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 40px;
 }
 /*.dataListSkills li {
   float: left;
@@ -46,9 +47,7 @@
   overflow-y: scroll;
   height: 95%;
   margin-top: 18px;
-  border-radius:0px;
-  
-
+  border-radius: 0px;
 }
 
 .neumorphismsStyle {
@@ -65,10 +64,6 @@
   font-size: 34px;
 }
 
-/*.buttonClick:hover {
-  background-color: #eceff3;
-  box-shadow: inset 5px 0px 6px rgba(163,177,198,0.6), inset -6px 0px 12px rgba(255,255,255, 0.9);
-}*/
 
 .buttonClick {
   text-transform: uppercase;
@@ -80,21 +75,8 @@
   }
 
 
-
-
-
-/*.buttonClick:active {
-  background-color: #eceff3;
-  box-shadow: inset 6px 0px 6px rgba(163,177,198,0.6), inset -6px 0px 12px rgba(255,255,255, 0.9);
-  text-transform: uppercase;
-}*/
-
-
-
-
-
-.buttonsMyInfos{
-    margin-top:50px;
+.buttonsMyInfos {
+  margin-top: 50px;
 }
 
 
@@ -102,8 +84,8 @@
 .size-container {
   height: 750px !important;
 }
+
 .nav {
-  
   border-radius: 6px;
   width: 85px;
   height: 255px;
@@ -117,7 +99,6 @@
   font-weight: 500;
   padding-top: 10px;
   padding-bottom: 10px;
-  
 }
 
 
@@ -137,12 +118,13 @@
 .profilDataTitle {
   text-align: left;
   font-size: 23px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.profilDataTitle::first-letter {
-  color: #8A2BE2;
-}
+  .profilDataTitle::first-letter {
+    color: #8A2BE2;
+  }
 
   .profilDataTitle i {
     color: #78cc6d;
@@ -166,6 +148,9 @@
   font-weight: 400;
 }
 
+
+
+
 .date {
   border-color: #78cc6d;
   margin: 0 0 11px;
@@ -178,11 +163,11 @@
   color: #888888;
   font-weight: 400;
   border: 1px solid #eee;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 hr {
-  margin: 50px 0 5px 0;
+  margin: 40px 0 5px 0;
 }
 
   hr.borders {
@@ -191,19 +176,30 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(191, 191, 191, 1), rgba(0, 0, 0, 0));
   }
 
+  hr.bordersTitle {
+    border: 0;
+    height: 1px;
+    margin: 0px 0 10px 0;
+    background-image: linear-gradient(to right, rgba(191, 191, 191, 0.5), rgba(191, 191, 191, 0.5), rgba(0, 0, 0, 0));
+  }
+
 .description, .activities, .website, .summary {
   color: #888888;
   padding-top: 8px;
 }
 
 .jobname {
-  color:#78cc6d;
+  color: #78cc6d;
 }
 
 .position, .institution, .skillsName, .projectsDisplayName {
   font-size: 17px;
   color: #323232;
   font-weight: 600;
+}
+
+.projectsDisplayName {
+  margin-top: 40px;
 }
 
 .website a {
@@ -248,18 +244,66 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+
+/***-- RESPONSIVE MOBILE ---***/
 @media screen and (max-width: 768px) {
   .nav {
     width: auto;
     height: auto;
   }
 
+  .container {
+    margin-top: 2px;
+    width: 96% !important;
+  }
 
+  .containerSettings {
+    padding-top: 6px;
+    height: auto;
+    background-color: #fff;
+  }
+
+  #naviBar {
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .img-size {
+    height: 125px !important;
+  }
+
+  .nav-item {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .profileContainer {
+    padding-bottom: 15px;
+  }
+
+  .area {
+    position: fixed;
+  }
+
+  .myName {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .buttonsMyInfos {
+    margin-top: 30px;
+  }
+
+  .dataListSkills {
+    height: 86px;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
-
-
-
-  @media screen and (max-width: 700px) {
+/*@media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
       height: auto;
@@ -275,143 +319,125 @@ div.content {
     }
 
 
+  }*/
+/*-----------------------*/
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.5rem;
+}
+
+
+.img-size {
+  height: 200px;
+}
+
+.size-container {
+  height: 800px;
+}
+
+.nav-size a {
+  width: 100px;
+}
+
+.backgroundGradient {
+  background: linear-gradient(0deg, #50a3a2, #78cc6d);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 22s ease infinite;
+  -moz-animation: AnimationName 22s ease infinite;
+  animation: AnimationName 22s ease infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*-----------------------*/
-
-
-  .nav-link {
-    display: block;
-    padding: 0.5rem 0.5rem;
+  50% {
+    background-position: 100% 50%
   }
 
+  100% {
+    background-position: 0% 50%
+  }
+}
 
-  .img-size {
-    height: 200px;
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
   }
 
-  .size-container {
-    height: 800px;
+  50% {
+    background-position: 100% 50%
   }
 
-  .nav-size a {
-    width: 100px;
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
   }
 
-  .backgroundGradient {
-    background: linear-gradient(0deg, #50a3a2, #78cc6d);
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 22s ease infinite;
-    -moz-animation: AnimationName 22s ease infinite;
-    animation: AnimationName 22s ease infinite;
+  50% {
+    background-position: 100% 50%
   }
 
-
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
+  100% {
+    background-position: 0% 50%
   }
-
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
+}
 
 
 
 
-  .swing-in-top-fwd {
-    -webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
+.swing-in-top-fwd {
+  -webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
-  /* ----------------------------------------------
+/* ----------------------------------------------
  * Generated by Animista on 2020-1-27 15:18:56
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-  /**
+/**
  * ----------------------------------------
  * animation flip-in-hor-bottom
  * ----------------------------------------
  */
-  @-webkit-keyframes flip-in-hor-bottom {
-    0% {
-      -webkit-transform: rotateX(80deg);
-      transform: rotateX(80deg);
-      opacity: 0;
-    }
-
-    100% {
-      -webkit-transform: rotateX(0);
-      transform: rotateX(0);
-      opacity: 1;
-    }
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
   }
 
-  @keyframes flip-in-hor-bottom {
-    0% {
-      -webkit-transform: rotateX(80deg);
-      transform: rotateX(80deg);
-      opacity: 0;
-    }
-
-    100% {
-      -webkit-transform: rotateX(0);
-      transform: rotateX(0);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
   }
-  /*------------------------------------------*/
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+/*------------------------------------------*/
 
 .swing-in-left-fwd {
   -webkit-animation: swing-in-left-fwd 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
@@ -478,6 +504,7 @@ div.content {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
 .area {
   background: #01386A;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
