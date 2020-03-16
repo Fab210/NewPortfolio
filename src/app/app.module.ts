@@ -7,11 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
+import { WorkDatePipe } from './pipe/workDate';
+
 
 @NgModule({
    declarations: [
       AppComponent,
-      PortfolioPageComponent
+    PortfolioPageComponent,
+    WorkDatePipe
    ],
    imports: [
       BrowserModule,

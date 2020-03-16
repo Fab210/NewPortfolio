@@ -94,7 +94,7 @@
             </i>Work
           </h3>
 
-          <ul *ngFor="let item of profileDataList.work; let i = index" class="dataList">
+          <ul *ngFor="let item of profileDataList.work | workDate; let i = index" class="dataList">
             <li class="date">
               {{item.startDate}} / {{item.endDate}}
 
@@ -108,7 +108,7 @@
             </li>
             <li class="website">
               <a href="{{item.website}}" target="_blank">{{item.website}}</a>
-              
+
               <hr class="borders">
             </li>
 
@@ -145,17 +145,19 @@
         <!-- WORKS  ------------------------->
         <!---------------------------------------------------------------------------------------->
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-          <h3 class="profilDataTitle"><i class="material-icons">
-  brush
-</i>Projects</h3>
+          <h3 class="profilDataTitle">
+            <i class="material-icons">
+              brush
+            </i>Projects
+          </h3>
           <ul *ngFor="let item of profileDataList.projects; let i = index" class="dataList">
             <li class="projectsDisplayName">
               <a href="{{item.githubUrl}}" target="_blank">{{item.displayName}}</a>
-             
+
             </li>
             <li class="codeLanguages">
               {{item.languages}}
-              
+
             </li>
             <li class="summary">
               {{item.summary}}
@@ -164,7 +166,7 @@
               <a href="{{item.website}}" target="_blank">{{item.website}}</a>
               <hr class="borders">
             </li>
-           
+
 
           </ul>
         </div>
