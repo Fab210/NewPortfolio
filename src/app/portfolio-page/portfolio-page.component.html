@@ -2,7 +2,7 @@
 
 
 
-<div class="container">
+<div class="container" *ngIf="isloading">
   <div class="row size-container">
     <!--
       -- ─── NAVIGATION ──────────────────────────────────────────────────
@@ -45,7 +45,7 @@
     <!--
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
-    <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle" *ngIf="isloading">
+    <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle" >
       <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="Responsive image">
       <h3 class="myName">{{profileDataList.basics.name}}</h3>
       <p class="jobname">{{profileDataList.basics.label}}</p>

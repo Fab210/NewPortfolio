@@ -33,9 +33,9 @@ export class PortfolioPageComponent implements OnInit {
   addAnimationInContainer() {
    
     let element = document.getElementById("animationContainer");
-    element.classList.remove("swing-in-left-fwd");
+    element.classList.remove("scale-in-hor-center");
     void element.offsetWidth; // trigger a DOM reflow
-    element.classList.add("swing-in-left-fwd");
+    element.classList.add("scale-in-hor-center");
     
   }
 
