@@ -2,6 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { ProfileDataService } from "./../services/profile-data.service";
 import { trigger, style, animate, transition, query } from '@angular/animations';
 
+declare var require: any
+const FileSaver = require('file-saver');
+
 
 @Component({
   selector: "app-portfolio-page",
@@ -37,6 +40,17 @@ export class PortfolioPageComponent implements OnInit {
     void element.offsetWidth; // trigger a DOM reflow
     element.classList.add("scale-in-hor-center");
     
+  }
+
+  goLinkedIn(){
+    
+    window.open('https://www.linkedin.com/in/fabio-santos88', "_blank");
+  }
+
+  downloadPdf() {
+    const pdfUrl = '../../assets/CVdevsite3.pdf';
+    const pdfName = 'CV_de_Fabio';
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
 }

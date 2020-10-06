@@ -46,12 +46,12 @@
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
     <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle" >
-      <img src="http://santosfabio.com/images/me3.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="Responsive image">
+      <!--<img src="../../assets/images/me.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="me">-->
       <h3 class="myName">{{profileDataList.basics.name}}</h3>
       <p class="jobname">{{profileDataList.basics.label}}</p>
       <div class="buttonsMyInfos">
-        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Download CV</button>
-        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick">Contact Me</button>
+        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick" (click)="downloadPdf()">Download CV</button>
+        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick" (click)="goLinkedIn()">My LinkedIn</button>
       </div>
     </div>
     <!--
