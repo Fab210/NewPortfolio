@@ -48,7 +48,7 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   downloadPdf() {
-    const pdfUrl = '../../assets/CVdevsite3.pdf';
+    const pdfUrl = './assets/CVdevsite3.pdf';
     const pdfName = 'CV_de_Fabio';
     FileSaver.saveAs(pdfUrl, pdfName);
   }
