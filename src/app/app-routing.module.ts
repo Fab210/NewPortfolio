@@ -4,7 +4,7 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
 
 const routes: Routes = [
 
-  { path: 'portfolio', component: PortfolioPageComponent },
+  { path: '', component: PortfolioPageComponent },
   /*{ path: '', redirectTo: '/portfolio', pathMatch: 'full' }*/
 ];
 
