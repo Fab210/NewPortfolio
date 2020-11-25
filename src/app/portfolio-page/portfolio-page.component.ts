@@ -48,9 +48,10 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   downloadPdf() {
-    const pdfUrl = 'github.com/Fab210/NewPortfolio/raw/master/docs/assets/CVdevsite3.pdf';
-    const pdfName = 'CV_de_Fabio';
-    FileSaver.saveAs(pdfUrl, pdfName);
+    window.open('https://github.com/Fab210/NewPortfolio/raw/master/docs/assets/CVdevsite3.pdf', "_blank");
+    //const pdfUrl = 'github.com/Fab210/NewPortfolio/raw/master/docs/assets/CVdevsite3.pdf';
+    //const pdfName = 'CV_de_Fabio';
+    //FileSaver.saveAs(pdfUrl, pdfName);
   }
 
 }
