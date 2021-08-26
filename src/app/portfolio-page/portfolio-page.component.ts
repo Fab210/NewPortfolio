@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { animate, query, style, transition, trigger } from '@angular/animations';
+
 import { ProfileDataService } from "./../services/profile-data.service";
-import { trigger, style, animate, transition, query } from '@angular/animations';
 
 declare var require: any
 const FileSaver = require('file-saver');
@@ -48,7 +49,7 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   downloadPdf() {
-    window.open('https://github.com/Fab210/NewPortfolio/raw/master/docs/assets/CVdevsite3.pdf', "_blank");
+    window.open('https://github.com/Fab210/NewPortfolio/raw/master/docs/assets/CV_Fabio_Santos.pdf', "_blank");
     //const pdfUrl = 'github.com/Fab210/NewPortfolio/raw/master/docs/assets/CVdevsite3.pdf';
     //const pdfName = 'CV_de_Fabio';
     //FileSaver.saveAs(pdfUrl, pdfName);
