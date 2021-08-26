@@ -1,7 +1,3 @@
-
-
-
-
 <div class="container" *ngIf="isloading">
   <div class="row size-container">
     <!--
@@ -17,7 +13,6 @@
             </i>Skills
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
              aria-controls="v-pills-profile" aria-selected="false" (click)="addAnimationInContainer()">
@@ -25,7 +20,6 @@
               assignment
             </i>Resume
           </a>
-
         </li>
         <li class="nav-item">
           <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
@@ -35,23 +29,20 @@
             </i>Projects
           </a>
         </li>
-        <!--<li class="nav-item">
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-             aria-controls="v-pills-settings" aria-selected="false" (click)="addAnimationInContainer()">Contact</a>
-        </li>-->
       </ul>
     </div>
     <!-- ───────────────────────────────────────────────────────────────── -->
     <!--
       -- ─── MY INFOS ────────────────────────────────────────────────────
       -->
-    <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle" >
-      <!--<img src="../../assets/images/me.jpg" class="img-fluid img-thumbnail img-size neumorphismsStyle" alt="me">-->
-      <h3 class="myName">{{profileDataList.basics.name}}</h3>
-      <p class="jobname">{{profileDataList.basics.label}}</p>
-      <div class="buttonsMyInfos">
-        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick" (click)="downloadPdf()">Download CV</button>
-        <button type="button" class="btn  btn-lg btn-block neumorphismsStyle buttonClick" (click)="goLinkedIn()">My LinkedIn</button>
+    <div class="col-md-4 containerSettings text-center profileContainer neumorphismsStyle">
+      <div class="my_infos">
+        <h3 class="myName">{{profileDataList.basics.name}}</h3>
+        <p class="jobname">{{profileDataList.basics.label}}</p>
+        <div class="buttonsMyInfos">
+          <button type="button" id="CV_btn" class="btn btn-lg btn-block neumorphismsStyle buttonClick" (click)="downloadPdf()">Download CV</button>
+          <button type="button" class="btn btn-lg btn-block neumorphismsStyle buttonClick" (click)="goLinkedIn()">My LinkedIn</button>
+        </div>
       </div>
     </div>
     <!--
@@ -61,7 +52,7 @@
       <!--- SKILLS ------------------------>
       <!---------------------------------------------------------------------------------------->
       <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <div class="tab-pane show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <div>
             <h3 class="profilDataTitle">
               <i class="material-icons">
@@ -76,11 +67,7 @@
                 </li>
                 <li>
                   {{item.level}}
-
                 </li>
-
-
-
               </ul>
             </div>
           </div>
@@ -88,7 +75,7 @@
         <!---------------------------------------------------------------------------------------->
         <!-- RESUME  ------------------------->
         <!---------------------------------------------------------------------------------------->
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <div class="tab-pane" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
           <h3 class="profilDataTitle">
             <i class="material-icons">
               work
@@ -98,9 +85,7 @@
           <ul *ngFor="let item of profileDataList.work | workDate; let i = index" class="dataList">
             <li class="date">
               {{item.startDate}} / {{item.endDate}}
-
             </li>
-
             <li class="position">
               {{item.position}}
             </li>
@@ -109,12 +94,9 @@
             </li>
             <li class="website">
               <a href="{{item.website}}" target="_blank">{{item.website}}</a>
-
               <hr class="borders">
             </li>
-
           </ul>
-
           <h3 class="profilDataTitle">
             <i class="material-icons">
               school
@@ -125,7 +107,6 @@
             <li class="date">
               {{item.startDate}} / {{item.endDate}}
             </li>
-
             <li class="institution">
               {{item.institution}}
             </li>
@@ -139,14 +120,12 @@
               {{item.activities}}
               <hr class="borders">
             </li>
-
-
           </ul>
         </div>
         <!---------------------------------------------------------------------------------------->
         <!-- WORKS  ------------------------->
         <!---------------------------------------------------------------------------------------->
-        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <div class="tab-pane" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <h3 class="profilDataTitle">
             <i class="material-icons">
               brush
@@ -156,11 +135,9 @@
           <ul *ngFor="let item of profileDataList.projects; let i = index" class="dataList">
             <li class="projectsDisplayName">
               <a href="{{item.githubUrl}}" target="_blank">{{item.displayName}}</a>
-
             </li>
             <li class="codeLanguages">
               {{item.languages}}
-
             </li>
             <li class="summary">
               {{item.summary}}
@@ -169,18 +146,12 @@
               <a href="{{item.website}}" target="_blank">{{item.website}}</a>
               <hr class="borders">
             </li>
-
-
           </ul>
         </div>
         <!---------------------------------------------------------------------------------------->
-        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-          ...727uilui
-        </div>
       </div>
     </div>
     <!-- ───────────────────────────────────────────────────────────────── -->
-
   </div>
 </div>
 <div class="area">
