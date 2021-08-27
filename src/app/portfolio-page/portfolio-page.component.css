@@ -24,8 +24,7 @@
   height: 85px;
   list-style-type: none;
   padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .profileContainer {
@@ -86,8 +85,8 @@
 
 .nav {
   border-radius: 6px;
-  width: 85px;
-  height: 255px;
+  width: 95px;
+  height: 270px;
   margin-left: auto;
 }
 
@@ -310,10 +309,11 @@ div.content {
   .dataListSkills {
     height: 86px;
     list-style-type: none;
-    padding-left: 20px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*padding-left: 20px;*/
+    /*padding-right: 40px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    padding: 5px 10px 10px 20px;
   }
 
   #animationContainer {

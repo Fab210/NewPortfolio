@@ -36,9 +36,12 @@ export class PortfolioPageComponent implements OnInit {
 
   addAnimationInContainer() {
     let element = document.getElementById("animationContainer");
-    element.classList.remove("fade-in-left");
+    /*element.classList.remove("fade-in-left");
     void element.offsetWidth; // trigger a DOM reflow
-    element.classList.add("fade-in-left");
+    element.classList.add("fade-in-left");*/
+    element.classList.remove("fade-in-left");
+    setTimeout(() => element.classList.add("fade-in-left"), 0);
+    
   }
 
   goLinkedIn() {
